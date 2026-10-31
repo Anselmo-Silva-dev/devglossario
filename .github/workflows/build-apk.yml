@@ -17,6 +17,7 @@ jobs:
           distribution: temurin
           java-version: '17'
       - run: npm install
+      - run: npx expo install --fix
       - run: npm run typecheck
       - run: npx expo prebuild --platform android --no-install
       - run: ./gradlew assembleRelease
